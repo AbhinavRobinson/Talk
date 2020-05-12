@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Create from './Create'
 import MakeRoom from './MakeRoom'
+import JoinRoom from './JoinRoom'
 
 export default class App extends Component {
 	render() {
@@ -14,6 +15,9 @@ export default class App extends Component {
 						</Route>
 						<Route path='/make_room'>
 							<MakeRoom></MakeRoom>
+						</Route>
+						<Route path='/join'>
+							<JoinRoom></JoinRoom>
 						</Route>
 					</Switch>
 				</Router>

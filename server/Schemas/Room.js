@@ -4,7 +4,7 @@ const UserSchema = require('./User').Schema
 
 const RoomSchema = new mongoose.Schema({
     password: { type: String, required: true },
-    participants: [UserSchema]
+    participants: [{type:mongoose.Schema.Types.ObjectId,ref:'User'}]
 })
 
 const Room = new mongoose.model('Room',RoomSchema,'Room')
