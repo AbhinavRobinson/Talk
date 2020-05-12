@@ -1,0 +1,16 @@
+.Outer{
+    width: 100%;
+    .Inner{
+        width: 80%;
+        margin: 80px auto;
+        display: flex;
+        align-content: space-between;
+        *{
+            border: 1px solid red;
+        }
+        .makes{
+            width:30%;
+            margin:0 3%;
+        }
+    }
+}
