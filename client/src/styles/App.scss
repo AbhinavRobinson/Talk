@@ -1,0 +1,256 @@
+
+
+//grid
+
+
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+  // border: 1px solid red;
+}
+
+//responsive
+.onPhone{
+  @media only screen and (min-width:767px) {
+    display:none;
+    visibility: hidden;
+    
+  }
+
+}
+.onPC{
+  @media only screen and (max-width:767px) {
+    display:none;
+    visibility: hidden;
+    
+  }
+
+}
+
+
+.App {
+  text-align: center;
+}
+* {
+  box-sizing: border-box;
+}
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.Page{
+  background: #ef32d9;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(45deg, #89fffd, #ef32d9);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(45deg, #89fffd, #ef32d9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height:100vh;
+  text-align: center;
+
+  .LoginPage{
+    background-color: white;
+  padding: 10px; 
+    width:70%; 
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+  @media only screen and (max-width:767px) {
+width:90%      
+    }
+    .block{
+      height:60vh;
+      @media only screen and (max-width:767px) {
+        height:75vh;
+      }
+      .titleMain{
+        font-weight: 600;
+        font-size: 2rem;
+        padding-top: 10px;
+      }
+
+      .left{
+        float: left ;
+        // width:100%;
+        // text-align: center !important;
+
+        
+        .camera{
+          border-radius: 20px;
+          width :50% ;
+          // overflow: hidden;
+         
+
+          @media only screen and (min-width:767px) {
+             position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          }
+          @media only screen and (max-width:767px) {
+            width:80%;
+            margin-top: 10px;
+            margin-left: 30px;
+          }
+          .webcam{
+          width :50% !important;
+
+         
+          border-radius: 20px;
+          @media only screen and (max-width:767px) {
+            width:100% !important;
+            
+          }
+            
+          }
+           
+          
+        }
+      
+      }
+    }
+  }
+}
+.button{
+  // width: 170px;
+  margin-top:20px;
+  padding-top: 17px;
+  padding-bottom: 15px;
+  text-align: center;
+  color: #000;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding-left: 30px;
+  padding-right: 30px;
+  cursor: pointer;
+  display: inline-block;
+  // border:1px solid black;
+  box-shadow: inherit;
+  border-radius: 20px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+transition: all 0.3s ease 0s;
+cursor: pointer;
+outline: none;
+}
+.button:hover {
+  background-color: #2EE59D;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+
+
+.title{
+  font-weight: 600;
+  font-size: 1.5rem;
+  padding-top: 10px;
+  @media only screen and (max-width:767px) {
+  font-size: 1rem;
+    
+  }
+}
+.btn-hello {
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+
+.right{
+  border-left:3px black solid;
+  @media only screen and (max-width:767px) {
+    border: 0;
+      
+    }
+}
+
+
+.camera{
+  border-radius: 20px;
+  text-align: center  ;
+  width :50% ;
+  // overflow: hidden;
+  margin:0 auto;
+  margin-top: 20px;
+  // position: relative;
+  // margin-top: 15%;
+  // transform: translateY(-0%);
+ 
+  @media only screen and (max-width:767px) {
+    width:80%;
+    margin-top: 10px;
+    margin-left: 30px;
+  }
+  .webcam{
+  width :60% !important;
+
+ 
+  border-radius: 20px;
+  @media only screen and (max-width:767px) {
+    width:100% !important;
+    
+  }
+    
+  }
+}
+.stepperFunctions{
+  bottom:0 !important;
+}
+.form{
+  @media only screen and (min-width:767px) {
+    width:60%;
+    margin: 0 auto;
+    
+  }
+
+}
+
+
+
+
+a{
+  text-decoration: none;
+}
