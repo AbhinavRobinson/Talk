@@ -74,8 +74,5 @@ npm i peer
 node peerjs
 ```
 
-### Step3
+### Step3: Talk!
 
-```
-# **Talk!**
-```
