@@ -195,7 +195,7 @@ class Test extends Component {
 							<div className='video'>
 								<video
 									className='video'
-									//   muted
+									  muted
 									style={{ transform: 'scaleX(-1)' }}
 									id='local'
 									src=''
