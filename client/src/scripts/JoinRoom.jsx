@@ -17,7 +17,7 @@ export default class JoinRoom extends Component {
 			username: this.state.username,
 			room_id: this.state.room_id,
 		})
-		this.setState({ data: 'ok done' })
+		this.setState({ data: data })
 	}
 
 	render() {

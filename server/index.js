@@ -53,4 +53,10 @@ app.post('/add_to_room', async (req, res) => {
     }
 })
 
+app.post('/calls',async (req,res)=>{
+	const room = await Room.findById(req.body.room_id)
+	const participants = room.participants
+	res.send(participants)
+})
+
 app.listen(port, () => console.log(`Listening on port ${port}`))

@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Create from './Create'
 import MakeRoom from './MakeRoom'
 import JoinRoom from './JoinRoom'
+import UserCall from './UserCall'
+import Call from './Call'
 
 export default class App extends Component {
 	render() {
@@ -18,6 +20,11 @@ export default class App extends Component {
 						</Route>
 						<Route path='/join'>
 							<JoinRoom></JoinRoom>
+						</Route>
+						<Route path='/user_call' component={UserCall}>
+						</Route>
+						<Route path='/'>
+							<Call></Call>
 						</Route>
 					</Switch>
 				</Router>
