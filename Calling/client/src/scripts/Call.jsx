@@ -173,17 +173,17 @@ class Test extends Component {
 
 					<div className='row onPC'>
 						<div className='left col-6'>
-							<div className='video'>
+							<div className=''>
 								<video
-									className='Video'
-									//   muted
+									className='video'
+									muted
 									style={{ transform: 'scaleX(-1)' }}
 									id='local'
 									src=''
 								></video>
 							</div>
 						</div>
-						<div className=' right col-6'>
+						<div className='right col-6'>
 							<div className='video'>
 								<video className='' id='remote' src=''></video>
 							</div>
@@ -194,7 +194,7 @@ class Test extends Component {
 						<div className=' col-12'>
 							<div className='video'>
 								<video
-									className='Video'
+									className='video'
 									//   muted
 									style={{ transform: 'scaleX(-1)' }}
 									id='local'
@@ -203,8 +203,8 @@ class Test extends Component {
 							</div>
 						</div>
 						<div className='  col-12'>
-							<div className='video'>
-								<video className='' id='remote' src=''></video>
+							<div >
+								<video className='video' id='remote' src=''></video>
 							</div>
 						</div>
 					</div>

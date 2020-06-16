@@ -19,7 +19,7 @@
     border-radius: 20px ;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     width: 70vw;
-    height: 70vh;
+    height: 80vh;
     text-align: center;
     padding-top: 0 !important;
     // overflow-y: auto;
@@ -35,7 +35,7 @@
     .video{
         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
         border-radius: 10px;
-        height:30vh;
+        height:30vh !important;
     }
     .onPhone{
         .video{
