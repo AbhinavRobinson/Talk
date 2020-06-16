@@ -1,0 +1,25 @@
+{
+  "name": "facial_recognition",
+  "version": "1.0.0",
+  "description": "This program has been used to implement Facial Recognition using Siamese Network architecture.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aniket-chowdhury/Facial-recognition.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aniket-chowdhury/Facial-recognition/issues"
+  },
+  "homepage": "https://github.com/aniket-chowdhury/Facial-recognition#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "multer": "^1.4.2",
+    "query-string": "^6.12.1"
+  }
+}

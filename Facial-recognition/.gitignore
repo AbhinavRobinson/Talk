@@ -1,0 +1,5 @@
+__pycache__/
+temp.py
+images
+uploads
+**/node_modules
