@@ -1,4 +1,4 @@
-
+#importing tensor flow and various other required libraries 
 import tensorflow as tf
 import numpy as np
 import os
