@@ -4,8 +4,10 @@
 ## Start Recognition Server:
 
 This program has been used to implement Facial Recognition using Siamese Network architecture One Shot Learning
+
+Prerequisites:
+
 ```
-Prerequisites
 h5py==2.8.0
 Keras==2.2.4
 tensorflow==1.13.0rc2
@@ -83,4 +85,6 @@ node peerjs
 ```
 
 ### Step 3: Talk!
+
+### Good to go
 

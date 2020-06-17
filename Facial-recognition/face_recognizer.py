@@ -60,4 +60,4 @@ print(set(arr1),end="")
 
 # video_capture.release()
 # cv2.destroyAllWindows()
-
+# releasing to ensure safety
