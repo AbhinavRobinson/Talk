@@ -48,7 +48,6 @@ python face_recognizer.py ${Name}
 
 Check
 ```
-
 curl localhost:8080?name={Name}
 ```
 
