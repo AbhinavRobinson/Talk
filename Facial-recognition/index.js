@@ -1,44 +1,60 @@
-// facialrecognition 
-const { spawn } = require('child_process')
 const express = require('express')
+const http = require('http')
+const socketIo = require('socket.io')
+const port = process.env.PORT || 8080
+
+require('./server')
 
 const app = express()
-const port = 8080
+
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
+// app.use(require('./Routes'))
+app.use(require('cors')())
+const spawn = require('child_process').spawn
 
-app.get('/', (req, res) => {
-	const py = spawn('python', ['./face_recognizer.py', req.query.name])
-	let dataToSend
-	py.stdout.on('data', function (data) {
-		dataToSend = data.toString()
-		res.send(dataToSend)
+app.get('/', (req, res) => res.send('Ok').status(200))
+
+app.get('/confirm', (req, res) => {})
+
+const server = http.createServer(app)
+
+const io = socketIo(server)
+
+function save(image, folder, image_name) {
+	const fs = require('fs')
+	const filename = __dirname + `/uploads/${folder}/${image_name}.jpg`
+
+	if (!fs.existsSync(__dirname + `/uploads/${folder}`)) {
+		fs.mkdirSync(__dirname + `/uploads/${folder}`, { recursive: true })
+	}
+	const base64Data = image.replace(/^data:([A-Za-z-+/]+);base64,/, '')
+
+	fs.writeFileSync(filename, base64Data, { encoding: 'base64' })
+}
+
+// let interval
+io.on('connection', (socket) => {
+	console.log('New client connected')
+	// if (interval) {
+	// 	clearInterval(interval)
+	// }
+	socket.on('ImageByClient', (data) => {
+		console.log(data['image'])
+		save(data['buffer'], data['username'], data['image_name'])
 	})
 
-	py.on('close', (code) => {
-		// console.log(`child process close all stdio with code ${code}`)
+	socket.on('Process', (data) => {
+		const py = spawn('python', ['./run.py', data['username']])
+
+		py.stdout.on('data', function (data) {
+			console.log(data.toString())
+		})
+	})
+
+	socket.on('disconnect', () => {
+		console.log('Client disconnected')
 	})
 })
 
-const multer = require('multer')
-
-const storage = multer.diskStorage({
-	destination: function (req, file, callback) {
-		callback(null, './images/' + req.body.name)
-	},
-	filename: function (req, file, callback) {
-		callback(null, file.fieldname + '-' + Date.now())
-	},
-})
-const upload = multer({ storage: storage }).array('userPhoto', 50)
-
-app.post('/register', (req, res) => {
-	upload(req, res, function (err) {
-		if (err) {
-			return res.end('Error uploading file.')
-		}
-		res.end('File is uploaded')
-	})
-})
-
-app.listen(port, () => console.log(`Listening on port ${port}`))
+server.listen(port, () => console.log(`Listening on port ${port}`))

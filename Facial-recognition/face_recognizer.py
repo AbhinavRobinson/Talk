@@ -1,6 +1,12 @@
 '''Face Recognition Main File'''
 
 import sys
+try:
+	sys.argv[1]
+except Exception as e:
+	print('Expected name')
+	sys.exit(1)
+
 import cv2
 import numpy as np
 import glob
@@ -31,8 +37,8 @@ from PIL import Image
 import os
 
 list_images = []
-for name in (os.listdir('uploads/'+str(sys.argv[1]))):
-	list_images.append(np.asarray(Image.open(os.path.join('uploads/'+str(sys.argv[1]),name))))
+for name in (os.listdir('verifies/'+str(sys.argv[1]))):
+	list_images.append(np.asarray(Image.open(os.path.join('verifies/'+str(sys.argv[1]),name))))
 	
 
 for frame in list_images:

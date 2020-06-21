@@ -6,6 +6,7 @@ import MakeRoom from './MakeRoom'
 import JoinRoom from './JoinRoom'
 import UserCall from './UserCall'
 import Call from './Call'
+import Register from './Register/'
 
 export default class App extends Component {
 	render() {
@@ -22,9 +23,11 @@ export default class App extends Component {
 						<Route path='/join'>
 							<JoinRoom></JoinRoom>
 						</Route>
-						<Route path='/user_call' component={UserCall}>
+						<Route path='/user_call' component={UserCall}></Route>
+						<Route path='/register'>
+							<Register></Register>
 						</Route>
-						<Route path='/'>
+						<Route path='/' exact>
 							<Call></Call>
 						</Route>
 					</Switch>
