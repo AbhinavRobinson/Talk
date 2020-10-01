@@ -1,4 +1,4 @@
-'''Face Recognition Main File'''
+'''Face Recognition Main File - This is the best project '''
 
 import sys
 try:
@@ -67,3 +67,4 @@ print(set(arr1),end="")
 # video_capture.release()
 # cv2.destroyAllWindows()
 # releasing to ensure safety
+# videocallingwithlowlatency
